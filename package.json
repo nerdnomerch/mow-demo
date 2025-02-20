@@ -1,0 +1,17 @@
+{
+  "name": "mmorpg-game",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start": "npm run start-backend",
+    "start-backend": "npm run start --workspace backend",
+    "build": "npm run build-frontend && npm run build-backend",
+    "build-frontend": "npm run build --workspace frontend",
+    "build-backend": "npm run build --workspace backend",
+    "heroku-postbuild": "npm run build"
+  }
+}
